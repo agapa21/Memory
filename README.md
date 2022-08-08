@@ -11,6 +11,12 @@ This program is made as the response to recruitment task for Motorola Solutions
 3: Hard level has 15 chances to reveal 8 pairs
 ![image](https://user-images.githubusercontent.com/77444561/183448244-6211180a-9f2d-41c1-a986-8699408758ab.png)
 
+4: If the words don't match:
+![image](https://user-images.githubusercontent.com/77444561/183464832-1aedcd08-b835-45e3-9098-d93cfe30ad40.png)
+
+5: If the words match (matched pair disapear):
+![image](https://user-images.githubusercontent.com/77444561/183464961-f75f4c95-7d28-4515-88d1-af520d564748.png)
+
 ---------------------------------------------------------------------------------------------------------------
 
 That was a short presentation of my game, but let's talk about me and why do I code:)
