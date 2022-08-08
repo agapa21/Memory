@@ -12,6 +12,7 @@ public class HardPanel extends JPanel {
     private int lastButton;
     private int previousButton;
     private int counter = 0;
+    private int pairsMatched = 0;
     int pairs = 8;
     int cards = pairs * 2;
     int chanses = 15;
@@ -43,7 +44,7 @@ public class HardPanel extends JPanel {
 
     public void setChansesTextfield()
     {
-        chansesTextField.setText("Guess chances: " + getChances());
+        chansesTextField.setText("Guess chances: " + chanses);
         chansesTextField.setFont(new Font("Ink Free",Font.BOLD,27));
         chansesTextField.setHorizontalAlignment(JLabel.CENTER);
     }
@@ -68,23 +69,24 @@ public class HardPanel extends JPanel {
     }
 
     public void comparePair() {
-
-        if (buttons[previousButton].getText()!=buttons[lastButton].getText()) {
-
-            JOptionPane.showMessageDialog(null, "No match :(","MESSAGE", JOptionPane.PLAIN_MESSAGE);
-            buttons[previousButton].setText("");
-            buttons[lastButton].setText("");
-
-            countChances();
-        }
-        else {
-
+        if (buttons[previousButton].getText() == buttons[lastButton].getText() && buttons[previousButton] != buttons[lastButton]) {
             JOptionPane.showMessageDialog(null, "Success!!! :D", "MESSAGE", JOptionPane.PLAIN_MESSAGE);
             buttons[previousButton].setVisible(false);
             buttons[lastButton].setVisible(false);
 
             previousButton = 0;
             lastButton = 0;
+
+            pairsMatched++;
+            checkWin();
+        }
+        else {
+
+            JOptionPane.showMessageDialog(null, "No match :(", "MESSAGE", JOptionPane.PLAIN_MESSAGE);
+            buttons[previousButton].setText("");
+            buttons[lastButton].setText("");
+
+            countChances();
         }
     }
 
@@ -121,14 +123,22 @@ public class HardPanel extends JPanel {
         chanses--;
         setChansesTextfield();
         if(chanses == 0){
-            for (int i = 0; i < cards; i++) {
-                buttons[i].setEnabled(false);
-            }
+            gameOverFailure();
         }
     }
 
-    public int getChances()
+    public void gameOverFailure()
     {
-        return chanses;
+        JOptionPane.showMessageDialog(null, "You lose :(");
+        System.exit(0);
+    }
+
+    public void checkWin()
+    {
+        if(pairsMatched == pairs)
+        {
+            JOptionPane.showMessageDialog(null, "You win :)");
+            System.exit(0);
+        }
     }
 }
