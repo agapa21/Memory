@@ -18,8 +18,3 @@ This program is made as the response to recruitment task for Motorola Solutions
 ![image](https://user-images.githubusercontent.com/77444561/183464961-f75f4c95-7d28-4515-88d1-af520d564748.png)
 
 ---------------------------------------------------------------------------------------------------------------
-
-That was a short presentation of my game, but let's talk about me and why do I code:)
-
-I tried a little bit of programming in high school and I enjoyed it. I had to focus on my Matura exam, so I quit. After that, when we had to choose field of study, I decided that I want to become a developer, so I chose AGH - University of Science and Technology to fully focus on IT area.
-Thinking about solusions is addictive for me, and finishing the code makes me super satified. Working in diffirent branches doesn't allow me to fully focus on coding. That's why I want to finally find a job in IT industry and become the best developer in the world (just kidding :D, but I want to be a good developer in the future).
